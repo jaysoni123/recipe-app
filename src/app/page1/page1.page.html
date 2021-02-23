@@ -1,0 +1,36 @@
+<script src="../../environments/environment.ts"></script>
+<script src="../recipes-data.ts"></script>
+<script src="page1.page.ts"></script>
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            Recipe App
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+    <ion-card>
+        <!--    <img src="{{recipe['image_path']}}" alt="{{recipe['name']}}" />-->
+        <ion-img [src]="recipeImagePath" alt="{{recipeData['dish_name']}}" class="rounded"></ion-img>
+        <ion-card-header>
+            <ion-card-title>{{recipeData['dish_name']}}</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+            <ion-card-subtitle color="danger">Ingrediants :</ion-card-subtitle>
+            <ul>
+                <li *ngFor="let ingrediant of recipeData['ingredients']">
+                    {{ingrediant}}
+                </li>
+            </ul>
+        </ion-card-content>
+        <ion-card-content>
+            <ion-card-subtitle color="danger">Method :</ion-card-subtitle>
+            {{recipeData['recipe']}}
+        </ion-card-content>
+    </ion-card>
+</ion-content>
+
+<ion-footer>
+
+</ion-footer>

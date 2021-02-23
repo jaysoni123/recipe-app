@@ -1,20 +1,21 @@
+<script src="home.page.ts"></script>
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Recipe App
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <!-- List of Text Items -->
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ng-container *ngFor="let recipe of recipesNames;index as i">
+    <ion-button class="ios" expand="block" [routerLink]="['/card', recipe['id']]">{{recipe['dish_name']}}</ion-button>
+  </ng-container>
+
+  <a [routerLink]="['/card', '1']">Card </a>
 </ion-content>
+
+<ion-footer>
+  <ion-label>soni.jay008@gmail.com</ion-label>
+</ion-footer>

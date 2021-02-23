@@ -3,6 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  // apiUrl: 'http://localhost:8000/',
+  // apiImagePath: 'http://localhost:8000/images/',
+
+  // apiUrl: 'http://recipeapp.rf.gd/',
+  // apiImagePath: 'http://recipeapp.rf.gd/images/',
+
+  apiUrl: 'http://theprayoshainternational.com/test/',
+  apiImagePath: 'http://theprayoshainternational.com/test/images/',
+
   production: false
 };
 
